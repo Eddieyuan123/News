@@ -10,7 +10,10 @@
 
 @interface HomeViewController : UIViewController
 
-@property(nonatomic, strong) UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UILabel *navigationView;
+@property (strong, nonatomic) IBOutlet UIImageView *rightBtn;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *navigationBar;
 
 @end
 

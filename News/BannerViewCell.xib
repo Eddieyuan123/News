@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BannerViewCell">
+            <connections>
+                <outlet property="courseAuthor" destination="jWE-20-d1H" id="Yep-G3-w6D"/>
+                <outlet property="courseCollectBtn" destination="ni5-8q-hCO" id="HDf-B1-rhV"/>
+                <outlet property="courseDesc" destination="RKL-uS-1H2" id="obi-LG-rzd"/>
+                <outlet property="courseImg" destination="RkN-9N-uad" id="HXD-Fv-fuw"/>
+                <outlet property="courseTitle" destination="2ug-pg-IcF" id="uyY-La-J0O"/>
+                <outlet property="view" destination="fjj-gs-Q2G" id="kmE-01-EU1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customBanner" rowHeight="100" id="KGk-i7-Jjw" customClass="BannerViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjj-gs-Q2G">
+                        <rect key="frame" x="8" y="8" width="304" height="83"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_btn_unpre_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-9N-uad">
+                                <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.78039215689999997" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="cSQ-W9-j0i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新疆大枣子便宜卖" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ug-pg-IcF">
+                                <rect key="frame" x="91" y="0.0" width="213" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作者：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-Hr-aEb">
+                                <rect key="frame" x="91" y="54" width="44" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="胡春安" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWE-20-d1H">
+                                <rect key="frame" x="127" y="54" width="51" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ni5-8q-hCO">
+                                <rect key="frame" x="239" y="50" width="57" height="30"/>
+                                <animations/>
+                                <state key="normal" title="收藏"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKL-uS-1H2">
+                                <rect key="frame" x="91" y="22" width="213" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="2ug-pg-IcF" firstAttribute="leading" secondItem="RkN-9N-uad" secondAttribute="trailing" constant="8" id="3sw-CJ-FX0"/>
+                            <constraint firstItem="RkN-9N-uad" firstAttribute="leading" secondItem="fjj-gs-Q2G" secondAttribute="leading" id="EJV-nF-zaY"/>
+                            <constraint firstItem="RKL-uS-1H2" firstAttribute="top" secondItem="2ug-pg-IcF" secondAttribute="bottom" constant="5" id="Ghm-FN-KZv"/>
+                            <constraint firstItem="RKL-uS-1H2" firstAttribute="leading" secondItem="RkN-9N-uad" secondAttribute="trailing" constant="8" id="Kfn-Ib-clM"/>
+                            <constraint firstAttribute="trailing" secondItem="2ug-pg-IcF" secondAttribute="trailing" id="Uhe-n3-93s"/>
+                            <constraint firstItem="RkN-9N-uad" firstAttribute="top" secondItem="fjj-gs-Q2G" secondAttribute="top" id="dPS-r4-FRm"/>
+                            <constraint firstItem="2ug-pg-IcF" firstAttribute="top" secondItem="fjj-gs-Q2G" secondAttribute="top" id="oWw-0r-dah"/>
+                            <constraint firstAttribute="bottom" secondItem="RkN-9N-uad" secondAttribute="bottom" id="v19-5W-92P"/>
+                            <constraint firstAttribute="trailing" secondItem="RKL-uS-1H2" secondAttribute="trailing" id="vEI-6D-ndq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="fjj-gs-Q2G" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="4e5-R4-5wM"/>
+                    <constraint firstItem="fjj-gs-Q2G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="7t0-2M-nmT"/>
+                    <constraint firstItem="fjj-gs-Q2G" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="WsP-5P-Occ"/>
+                    <constraint firstItem="fjj-gs-Q2G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="YfS-4R-TiW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <point key="canvasLocation" x="235" y="125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="search_btn_unpre_bg.png" width="65" height="65"/>
+    </resources>
+</document>
