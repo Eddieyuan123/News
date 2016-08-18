@@ -16,6 +16,7 @@
 		2C1BB6891D6537A2006583A8 /* search_btn_unpre_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C1BB6881D6537A2006583A8 /* search_btn_unpre_bg.png */; };
 		2C1BB6911D654483006583A8 /* BannerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1BB68F1D654483006583A8 /* BannerViewCell.m */; };
 		2C1BB6921D654483006583A8 /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1BB6901D654483006583A8 /* BannerViewCell.xib */; };
+		2C50EA0F1D6605BD0007A709 /* GZVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C50EA0E1D6605BD0007A709 /* GZVideoModel.m */; };
 		2CA8594F1D650D21002B5A00 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8594D1D650D21002B5A00 /* VideoViewController.m */; };
 		2CA859501D650D21002B5A00 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8594E1D650D21002B5A00 /* VideoViewController.xib */; };
 		2CA859541D650ECE002B5A00 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA859531D650ECE002B5A00 /* HomeViewController.xib */; };
@@ -59,6 +60,8 @@
 		2C1BB68E1D654483006583A8 /* BannerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewCell.h; sourceTree = "<group>"; };
 		2C1BB68F1D654483006583A8 /* BannerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewCell.m; sourceTree = "<group>"; };
 		2C1BB6901D654483006583A8 /* BannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
+		2C50EA0D1D6605BD0007A709 /* GZVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZVideoModel.h; sourceTree = "<group>"; };
+		2C50EA0E1D6605BD0007A709 /* GZVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZVideoModel.m; sourceTree = "<group>"; };
 		2CA8594C1D650D21002B5A00 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		2CA8594D1D650D21002B5A00 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		2CA8594E1D650D21002B5A00 /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
@@ -128,6 +131,15 @@
 			name = banner;
 			sourceTree = "<group>";
 		};
+		2C50EA0C1D66054C0007A709 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2C50EA0D1D6605BD0007A709 /* GZVideoModel.h */,
+				2C50EA0E1D6605BD0007A709 /* GZVideoModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		2CA859551D65236C002B5A00 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +183,7 @@
 		C79DC9AC1D65ED140088AAD7 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				2C50EA0C1D66054C0007A709 /* model */,
 				2C1BB68A1D654428006583A8 /* views */,
 				C7B80F071D672A0100BED9D0 /* public */,
 				C7CEE0AB1D6726180099510A /* resource */,
@@ -397,6 +410,7 @@
 			files = (
 				C79DC9B51D65ED140088AAD7 /* ViewController.m in Sources */,
 				C79DC9B21D65ED140088AAD7 /* AppDelegate.m in Sources */,
+				2C50EA0F1D6605BD0007A709 /* GZVideoModel.m in Sources */,
 				2CA8594F1D650D21002B5A00 /* VideoViewController.m in Sources */,
 				C79DC9BB1D65ED150088AAD7 /* News.xcdatamodeld in Sources */,
 				C7CEE0A81D671C930099510A /* HomeViewController.m in Sources */,

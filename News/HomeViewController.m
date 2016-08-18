@@ -30,13 +30,19 @@
     return 50;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString* indentifier = @"customBanner";
-    BannerViewCell* cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
-//    if(cell == nil) {
-//        cell = [[BannerViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indentifier];
-//        }
-    return cell;
+    BannerViewCell* bannerViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+    if(bannerViewCell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"BannerViewCell" bundle:nil]  forCellReuseIdentifier:indentifier];
+        bannerViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+        }
+    bannerViewCell.courseTitle.text = @"新疆葡萄干";
+    return bannerViewCell;
 }
 
 - (void)didReceiveMemoryWarning {
