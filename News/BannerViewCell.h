@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GZVideoModel.h"
 
 @interface BannerViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *courseImg;
@@ -16,4 +17,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *courseCollectBtn;
 @property (strong, nonatomic) IBOutlet UIView *view;
 
+-(void)setGZVideoModel:(GZVideoModel *)videoModel;
 @end

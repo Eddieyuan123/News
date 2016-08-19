@@ -9,8 +9,17 @@
 #import "HomeViewController.h"
 #import "BannerViewCell.h"
 #import "public.h"
+#import "BmobSDK/Bmob.h"
+#import "GZVideoModel.h"
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>{
+    
+    NSMutableArray *_videoMutableArray;
+}
+
+
+
 
 @end
 
@@ -21,13 +30,41 @@
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:YES];
     self.view.backgroundColor = [UIColor whiteColor];
+    _videoMutableArray = [[NSMutableArray alloc] initWithCapacity:1];
+    [self initData];
 }
 
+
+-(void)initData{
+    
+    [_videoMutableArray removeAllObjects];
+    
+    BmobQuery *bquery = [BmobQuery queryWithClassName:@"Video"];
+    [bquery orderByDescending:@"updatedAt"];
+    [bquery whereKey:@"videoType" equalTo:[NSNumber numberWithInt:1]];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array,NSError *error){
+        for (BmobObject *obj in array) {
+            GZVideoModel *videoModel = [[GZVideoModel alloc] init];
+            if ([obj objectForKey:@"videoName"]) {
+                videoModel.videoName = [obj objectForKey:@"videoName"];
+            }
+            if ([obj objectForKey:@"imageUrl"]) {
+                videoModel.imageUrl = [obj objectForKey:@"imageUrl"];
+            }
+            if ([obj objectForKey:@"author"]) {
+                videoModel.author = [obj objectForKey:@"author"];
+            }
+            [_videoMutableArray addObject:videoModel];
+        }
+    }];
+
+    [self.tableView reloadData];
+}
 /*
  table view total number
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 50;
+    return [_videoMutableArray count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -41,7 +78,8 @@
         [tableView registerNib:[UINib nibWithNibName:@"BannerViewCell" bundle:nil]  forCellReuseIdentifier:indentifier];
         bannerViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
         }
-    bannerViewCell.courseTitle.text = @"新疆葡萄干";
+    GZVideoModel *videoModel = (GZVideoModel*)[_videoMutableArray objectAtIndex:indexPath.row];
+    [bannerViewCell setGZVideoModel:videoModel];
     return bannerViewCell;
 }
 

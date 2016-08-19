@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BmobSDK/Bmob.h"
 
-@interface GZVideoModel : NSObject
+@interface GZVideoModel : BmobObject
 
+@property(nonatomic, strong) NSNumber *count;
+@property(nonatomic, strong) NSString *url;
 @property(nonatomic, strong) NSString *imageUrl;
-@property(nonatomic, strong) NSString *courseTitle;
-@property(nonatomic, strong) NSString *courseDesc;
-@property(nonatomic, strong) NSString *courseAuthor;
-@property(nonatomic, strong) NSString *courseUrl;
-
--(void)setImageUrl:(NSString *)imageUrl;
--(NSString*) imageUrl;
+@property(nonatomic, strong) NSString *author;
+@property(nonatomic, strong) NSNumber *videoType;
+@property(nonatomic, strong) NSNumber *star;
+@property(nonatomic, strong) NSString *videoName;
 @end

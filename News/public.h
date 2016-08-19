@@ -49,4 +49,5 @@
 //7.
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
+
 #endif /* public_h */

@@ -7,6 +7,7 @@
 //
 
 #import "BannerViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation BannerViewCell
 
@@ -24,6 +25,13 @@
 
 -(void)initViews{
     self.courseTitle.text = @"新疆葡萄干";
+}
+
+
+-(void)setGZVideoModel:(GZVideoModel *)videoModel{
+    self.courseTitle.text = videoModel.videoName;
+    self.courseAuthor.text = videoModel.author;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:videoModel.imageUrl] placeholderImage:[UIImage imageNamed:@"search_btn_unpre_bg"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
