@@ -75,8 +75,8 @@
         imageView.backgroundColor = [UIColor redColor];
 //        imageView.frame = CGRectMake(i*screen_width, 0, screen_width, self.frame.size.height);
         NSString *imageName =[NSString stringWithFormat:@"%@",imageArray[i]];
-//        NSLog(@"%@",imageName);
-        [imageView sd_setImageWithURL:[NSURL URLWithString:imageName] placeholderImage:[UIImage imageNamed:@"ic_gray_bg"]];
+        //NSLog(@"------%@======",imageName);
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageName] placeholderImage:[UIImage imageNamed:@"bg_index_banner"]];
         
 //        [self.scrollView addSubview:imageView];
     }

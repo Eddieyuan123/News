@@ -13,19 +13,16 @@
 #import "BmobSDK/Bmob.h"
 #import "GZVideoModel.h"
 #import "ImageScrollCell.h"
+#import "QuickEntryViewCell.h"
 
 
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate
-                                    ,ImageScrollViewDelegate>{
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,ImageScrollViewDelegate>{
     
     NSMutableArray *_videoMutableArray;
     NSMutableArray *_focusImgurlArray;
     MBProgressHUD *hud;
 }
-
-
-
 
 @end
 
@@ -95,12 +92,14 @@
  table view total number
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_videoMutableArray count] + 1;
+    return _videoMutableArray.count + 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         return 155;
+    }else if(indexPath.row == 1){
+        return 200;
     }else{
         return 100;
     }
@@ -122,6 +121,14 @@
         imageScrollCell.imageScrollView.delegate = self;
         [imageScrollCell setImageArr:_focusImgurlArray];
         return imageScrollCell;
+    }else if(indexPath.row == 1){
+        static NSString* indentifier = @"quickEntry";
+        QuickEntryViewCell* quickEntryCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+        if(quickEntryCell == nil) {
+            [tableView registerNib:[UINib nibWithNibName:@"QuickEntryViewCell" bundle:nil]  forCellReuseIdentifier:indentifier];
+            quickEntryCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+        }
+        return quickEntryCell;
     }else{
         static NSString* indentifier = @"customBanner";
         BannerViewCell* bannerViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
@@ -129,11 +136,19 @@
             [tableView registerNib:[UINib nibWithNibName:@"BannerViewCell" bundle:nil]  forCellReuseIdentifier:indentifier];
             bannerViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
         }
-        GZVideoModel *videoModel = (GZVideoModel*)[_videoMutableArray objectAtIndex:indexPath.row];
+        GZVideoModel *videoModel = (GZVideoModel*)[_videoMutableArray objectAtIndex:indexPath.row - 2];
         [bannerViewCell setGZVideoModel:videoModel];
         return bannerViewCell;
     }
 }
+
+
+#pragma mark - ImageScrollViewDelegate
+-(void)didSelectImageAtIndex:(NSInteger)index{
+
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

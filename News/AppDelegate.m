@@ -30,10 +30,10 @@
      UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:thirdViewController];
     UIViewController* fourViewController = [[UIViewController alloc] init];
      UINavigationController* nav4 = [[UINavigationController alloc] initWithRootViewController:fourViewController];
-    homeViewController.title = @"课程中心";
-    secondViewController.title = @"视频专区";
-    thirdViewController.title = @"资源中心";
-    fourViewController.title = @"个人中心";
+    homeViewController.title = @"首页";
+    secondViewController.title = @"朋友圈";
+    thirdViewController.title = @"个人中心";
+    fourViewController.title = @"更多";
     
     
     NSArray* viewCtrs = @[nav1,nav2,nav3,nav4];
@@ -48,14 +48,14 @@
     UITabBarItem* item1 = [tabBar.items objectAtIndex:1];
     UITabBarItem* item2 = [tabBar.items objectAtIndex:2];
     UITabBarItem* item3 = [tabBar.items objectAtIndex:3];
-    item0.selectedImage = [[UIImage imageNamed:@"bottom_tab1_pre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item0.image = [[UIImage imageNamed:@"bottom_tab1_unpre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item1.selectedImage = [[UIImage imageNamed:@"bottom_tab2_pre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item1.image = [[UIImage imageNamed:@"bottom_tab2_unpre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.selectedImage = [[UIImage imageNamed:@"bottom_tab3_pre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.image = [[UIImage imageNamed:@"bottom_tab3_unpre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.selectedImage = [[UIImage imageNamed:@"bottom_tab3_pre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.image = [[UIImage imageNamed:@"bottom_tab3_unpre"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item0.selectedImage = [[UIImage imageNamed:@"icon_home_blue"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item0.image = [[UIImage imageNamed:@"icon_home_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.selectedImage = [[UIImage imageNamed:@"icon_group_blue"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.image = [[UIImage imageNamed:@"icon_group_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.selectedImage = [[UIImage imageNamed:@"icon_personal_blue"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.image = [[UIImage imageNamed:@"icon_personal_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.selectedImage = [[UIImage imageNamed:@"icon_more_blue"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.image = [[UIImage imageNamed:@"icon_more_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //改变UITabBarItem字体颜色
 
     
