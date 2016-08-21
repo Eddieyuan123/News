@@ -22,7 +22,7 @@
 
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate
-,ImageScrollViewDelegate,BannerViewCellDelegate>{
+,ImageScrollViewDelegate,BmobRequestDelegate>{
     
     NSMutableArray *_videoMutableArray;
     NSMutableArray *_focusImgurlArray;

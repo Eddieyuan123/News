@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol BannerViewCellDelegate <NSObject>
+@protocol BmobRequestDelegate <NSObject>
 
 @required
 -(void)beforeRequest;
@@ -20,7 +20,7 @@
 
 @interface BmobRequest : NSObject
 
-@property (assign,nonatomic) id<BannerViewCellDelegate> delegate;
+@property (assign,nonatomic) id<BmobRequestDelegate> delegate;
 @property NSMutableArray *_videoMutableArray;
 
 
