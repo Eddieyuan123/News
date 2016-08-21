@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.navigationController setNavigationBarHidden:YES];
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    //[self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 50, 0)];
+    //去掉分割线
+    //self.tableView.separatorStyle = NO;
 }
 
 - (void)didReceiveMemoryWarning {

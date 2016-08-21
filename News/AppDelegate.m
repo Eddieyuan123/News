@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "PersonalViewController.h"
 #import "BmobSDK/Bmob.h"
 #import "public.h"
 
@@ -26,7 +27,7 @@
     UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     UIViewController* secondViewController = [[UIViewController alloc] init];
      UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:secondViewController];
-    UIViewController* thirdViewController = [[UIViewController alloc] init];
+    PersonalViewController* thirdViewController = [[PersonalViewController alloc] init];
      UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:thirdViewController];
     UIViewController* fourViewController = [[UIViewController alloc] init];
      UINavigationController* nav4 = [[UINavigationController alloc] initWithRootViewController:fourViewController];
