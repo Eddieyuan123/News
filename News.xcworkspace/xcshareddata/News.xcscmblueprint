@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D3A5317B68A3458D72A21FAF0C3B95B2C7B4B730",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7604E3C987DF6B729A4A006AAB960165C00D8B61" : 0,
+    "D3A5317B68A3458D72A21FAF0C3B95B2C7B4B730" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A3409DC1-B8CE-4646-93C1-6D74D83C81FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7604E3C987DF6B729A4A006AAB960165C00D8B61" : "chuanke\/",
+    "D3A5317B68A3458D72A21FAF0C3B95B2C7B4B730" : "News\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "News",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "News.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lookingstars\/chuanke.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7604E3C987DF6B729A4A006AAB960165C00D8B61"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Eddieyuan123\/News.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D3A5317B68A3458D72A21FAF0C3B95B2C7B4B730"
+    }
+  ]
+}

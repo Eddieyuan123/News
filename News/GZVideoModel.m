@@ -10,4 +10,12 @@
 
 @implementation GZVideoModel
 
+-(void)setImageUrl:(NSString *)imageUrl{
+    self.imageUrl = imageUrl;
+}
+
+-(NSString*)imageUrl{
+    return self.imageUrl;
+}
 @end
+

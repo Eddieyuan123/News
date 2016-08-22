@@ -16,4 +16,6 @@
 @property(nonatomic, strong) NSString *courseAuthor;
 @property(nonatomic, strong) NSString *courseUrl;
 
+-(void)setImageUrl:(NSString *)imageUrl;
+-(NSString*) imageUrl;
 @end
