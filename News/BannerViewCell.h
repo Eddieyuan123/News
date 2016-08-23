@@ -12,10 +12,10 @@
 @interface BannerViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *courseImg;
 @property (strong, nonatomic) IBOutlet UILabel *courseTitle;
-@property (strong, nonatomic) IBOutlet UILabel *courseDesc;
 @property (strong, nonatomic) IBOutlet UILabel *courseAuthor;
 @property (strong, nonatomic) IBOutlet UIButton *courseCollectBtn;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (strong, nonatomic) IBOutlet UIView *starView;
 
 -(void)setGZVideoModel:(GZVideoModel *)videoModel;
 @end
