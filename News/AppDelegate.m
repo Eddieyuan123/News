@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "BmobSDK/Bmob.h"
 #import "public.h"
 
 @interface AppDelegate ()
@@ -71,6 +72,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSString *appID = @"0067b643284021673ca760fe575e3873";
+    [Bmob registerWithAppKey:appID];
     [self initRootView];
     return YES;
 }

@@ -31,7 +31,7 @@
 -(void)setGZVideoModel:(GZVideoModel *)videoModel{
     self.courseTitle.text = videoModel.videoName;
     self.courseAuthor.text = videoModel.author;
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:videoModel.imageUrl] placeholderImage:[UIImage imageNamed:@"search_btn_unpre_bg"]];
+    [self.courseImg sd_setImageWithURL:[NSURL URLWithString:videoModel.imageUrl] placeholderImage:[UIImage imageNamed:@"search_btn_unpre_bg"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -10,12 +10,12 @@
 		2C1BB6911D654483006583A8 /* BannerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1BB68F1D654483006583A8 /* BannerViewCell.m */; };
 		2C1BB6921D654483006583A8 /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1BB6901D654483006583A8 /* BannerViewCell.xib */; };
 		2C50EA0F1D6605BD0007A709 /* GZVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C50EA0E1D6605BD0007A709 /* GZVideoModel.m */; };
-		2C83C2EC1D673D4A000298BC /* ImageScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C83C2E91D673D4A000298BC /* ImageScrollCell.m */; };
-		2C83C2ED1D673D4A000298BC /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C83C2EB1D673D4A000298BC /* ImageScrollView.m */; };
 		2CA8594F1D650D21002B5A00 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8594D1D650D21002B5A00 /* VideoViewController.m */; };
 		2CA859501D650D21002B5A00 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8594E1D650D21002B5A00 /* VideoViewController.xib */; };
 		2CA859541D650ECE002B5A00 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA859531D650ECE002B5A00 /* HomeViewController.xib */; };
 		35BDA607D605440D1C4E6A1B /* libPods-News.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57807A0217240AF7CEF25B1E /* libPods-News.a */; };
+		C78AB6E41D6BF36700217402 /* ImageScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C78AB6E21D6BF36700217402 /* ImageScrollCell.m */; settings = {ASSET_TAGS = (); }; };
+		C78AB6E61D6BF36E00217402 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C78AB6E51D6BF36E00217402 /* ImageScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		C79DC9AF1D65ED140088AAD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DC9AE1D65ED140088AAD7 /* main.m */; };
 		C79DC9B21D65ED140088AAD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DC9B11D65ED140088AAD7 /* AppDelegate.m */; };
 		C79DC9B51D65ED140088AAD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DC9B41D65ED140088AAD7 /* ViewController.m */; };
@@ -52,16 +52,16 @@
 		2C1BB6901D654483006583A8 /* BannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
 		2C50EA0D1D6605BD0007A709 /* GZVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZVideoModel.h; sourceTree = "<group>"; };
 		2C50EA0E1D6605BD0007A709 /* GZVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZVideoModel.m; sourceTree = "<group>"; };
-		2C83C2E81D673D4A000298BC /* ImageScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScrollCell.h; path = ../../baiduchuanke/chuanke/Others/3tdParts/LoopView/ImageScrollCell.h; sourceTree = "<group>"; };
-		2C83C2E91D673D4A000298BC /* ImageScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageScrollCell.m; path = ../../baiduchuanke/chuanke/Others/3tdParts/LoopView/ImageScrollCell.m; sourceTree = "<group>"; };
-		2C83C2EA1D673D4A000298BC /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScrollView.h; path = ../../baiduchuanke/chuanke/Others/3tdParts/LoopView/ImageScrollView.h; sourceTree = "<group>"; };
-		2C83C2EB1D673D4A000298BC /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageScrollView.m; path = ../../baiduchuanke/chuanke/Others/3tdParts/LoopView/ImageScrollView.m; sourceTree = "<group>"; };
 		2CA8594C1D650D21002B5A00 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		2CA8594D1D650D21002B5A00 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		2CA8594E1D650D21002B5A00 /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		2CA859531D650ECE002B5A00 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		57807A0217240AF7CEF25B1E /* libPods-News.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-News.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E56AD2B49585868D0DFC9BE /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
+		C78AB6E11D6BF36700217402 /* ImageScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollCell.h; sourceTree = "<group>"; };
+		C78AB6E21D6BF36700217402 /* ImageScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollCell.m; sourceTree = "<group>"; };
+		C78AB6E31D6BF36700217402 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		C78AB6E51D6BF36E00217402 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
 		C79DC9AA1D65ED140088AAD7 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79DC9AE1D65ED140088AAD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C79DC9B01D65ED140088AAD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,10 +148,10 @@
 		2C83C2EE1D673D53000298BC /* imageScroll */ = {
 			isa = PBXGroup;
 			children = (
-				2C83C2E81D673D4A000298BC /* ImageScrollCell.h */,
-				2C83C2E91D673D4A000298BC /* ImageScrollCell.m */,
-				2C83C2EA1D673D4A000298BC /* ImageScrollView.h */,
-				2C83C2EB1D673D4A000298BC /* ImageScrollView.m */,
+				C78AB6E51D6BF36E00217402 /* ImageScrollView.m */,
+				C78AB6E11D6BF36700217402 /* ImageScrollCell.h */,
+				C78AB6E21D6BF36700217402 /* ImageScrollCell.m */,
+				C78AB6E31D6BF36700217402 /* ImageScrollView.h */,
 			);
 			name = imageScroll;
 			sourceTree = "<group>";
@@ -471,10 +471,10 @@
 				2CA8594F1D650D21002B5A00 /* VideoViewController.m in Sources */,
 				C79DC9BB1D65ED150088AAD7 /* News.xcdatamodeld in Sources */,
 				C7CEE0A81D671C930099510A /* HomeViewController.m in Sources */,
-				2C83C2EC1D673D4A000298BC /* ImageScrollCell.m in Sources */,
+				C78AB6E41D6BF36700217402 /* ImageScrollCell.m in Sources */,
 				C79DC9AF1D65ED140088AAD7 /* main.m in Sources */,
 				2C1BB6911D654483006583A8 /* BannerViewCell.m in Sources */,
-				2C83C2ED1D673D4A000298BC /* ImageScrollView.m in Sources */,
+				C78AB6E61D6BF36E00217402 /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
