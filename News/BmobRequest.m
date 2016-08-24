@@ -9,6 +9,11 @@
 #import "BmobRequest.h"
 #import "BmobSDK/Bmob.h"
 #import "GZVideoModel.h"
+@interface BmobRequest(){
+    
+    
+}
+@end
 
 @implementation BmobRequest
 
@@ -23,10 +28,13 @@
 
 //请求数据
 -(void)requestVideoData:(int)currentPage pageSize:(int)pageSize{
-    if (self.delegate) {
-        [self.delegate beforeRequest];
+    if (!self.delegate) {
+        return;
     }
+    [self.delegate beforeRequest];
+    
     [__videoMutableArray removeAllObjects];
+    
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"Video"];
     [bquery orderByDescending:@"updatedAt"];
     bquery.limit = pageSize;
