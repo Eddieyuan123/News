@@ -17,6 +17,7 @@
 		2CA859501D650D21002B5A00 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8594E1D650D21002B5A00 /* VideoViewController.xib */; };
 		2CA859541D650ECE002B5A00 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA859531D650ECE002B5A00 /* HomeViewController.xib */; };
 		35BDA607D605440D1C4E6A1B /* libPods-News.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57807A0217240AF7CEF25B1E /* libPods-News.a */; };
+		C783F4111D6D4D3F000EFD8C /* BmobRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C783F4101D6D4D3F000EFD8C /* BmobRequest.m */; settings = {ASSET_TAGS = (); }; };
 		C78AB6F71D6C8E7C00217402 /* ImageScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C78AB6F41D6C8E7C00217402 /* ImageScrollCell.m */; };
 		C78AB6F81D6C8E7C00217402 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C78AB6F61D6C8E7C00217402 /* ImageScrollView.m */; };
 		C79DC9AF1D65ED140088AAD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DC9AE1D65ED140088AAD7 /* main.m */; };
@@ -66,6 +67,9 @@
 		2CA859531D650ECE002B5A00 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		57807A0217240AF7CEF25B1E /* libPods-News.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-News.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E56AD2B49585868D0DFC9BE /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
+		C783F40F1D6D4D3F000EFD8C /* BmobRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BmobRequest.h; sourceTree = "<group>"; };
+		C783F4101D6D4D3F000EFD8C /* BmobRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BmobRequest.m; sourceTree = "<group>"; };
+		C783F4121D6DA4BC000EFD8C /* constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
 		C78AB6F31D6C8E7C00217402 /* ImageScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScrollCell.h; path = LoopView/ImageScrollCell.h; sourceTree = "<group>"; };
 		C78AB6F41D6C8E7C00217402 /* ImageScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageScrollCell.m; path = LoopView/ImageScrollCell.m; sourceTree = "<group>"; };
 		C78AB6F51D6C8E7C00217402 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScrollView.h; path = LoopView/ImageScrollView.h; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				2C50EA0E1D6605BD0007A709 /* GZVideoModel.m */,
 				2C681B5F1D68A2D600DB263B /* GZBarrageModel.h */,
 				2C681B601D68A2D600DB263B /* GZBarrageModel.m */,
+				C783F40F1D6D4D3F000EFD8C /* BmobRequest.h */,
+				C783F4101D6D4D3F000EFD8C /* BmobRequest.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B80F081D672A1600BED9D0 /* public.h */,
+				C783F4121D6DA4BC000EFD8C /* constant.h */,
 			);
 			name = public;
 			sourceTree = "<group>";
@@ -474,6 +481,7 @@
 				C79DC9AF1D65ED140088AAD7 /* main.m in Sources */,
 				2C1BB6911D654483006583A8 /* BannerViewCell.m in Sources */,
 				2C681B611D68A2D600DB263B /* GZBarrageModel.m in Sources */,
+				C783F4111D6D4D3F000EFD8C /* BmobRequest.m in Sources */,
 				C78AB6F81D6C8E7C00217402 /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,27 +23,36 @@ PODS:
   - BmobSDK (1.7.2)
   - FLKAutoLayout (0.2.1)
   - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
   - ORStackView (3.0.1):
     - FLKAutoLayout (~> 0.2)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6)
   - BmobSDK
   - MBProgressHUD (~> 0.8)
+  - MJExtension
+  - MJRefresh
   - ORStackView (~> 3.0)
   - SDWebImage (~> 3.8.1)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
   FLKAutoLayout: 9db6b30c2008d230da608e62c607b11c23b942e6
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ORStackView: a1bb52748cd0ae29891c140baf22ff8972fb363c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 468dde95989fb7aafb1ecd772b91fc44d01ddcf5
+PODFILE CHECKSUM: 87d0ab79149ce2880f87f6c329c5fe61dfcc8f94
 
 COCOAPODS: 1.1.0.beta.1

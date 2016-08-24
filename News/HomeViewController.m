@@ -10,18 +10,26 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "BannerViewCell.h"
 #import "public.h"
+#import "constant.h"
 #import "BmobSDK/Bmob.h"
 #import "GZVideoModel.h"
 #import "ImageScrollCell.h"
 #import "QuickEntryViewCell.h"
+#import "BmobRequest.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
 
 
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,ImageScrollViewDelegate>{
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate
+,ImageScrollViewDelegate,BannerViewCellDelegate>{
     
     NSMutableArray *_videoMutableArray;
     NSMutableArray *_focusImgurlArray;
     MBProgressHUD *hud;
+    BmobRequest* bmobRequest;
+    int currentPage;
+    int pageSize;
 }
 
 @end
@@ -31,63 +39,87 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    currentPage = 0;
+    pageSize = 5;
     [self.navigationController setNavigationBarHidden:YES];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor darkGrayColor];
     hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeAnnularDeterminate;
     hud.labelText = @"拼命加载中";
     _videoMutableArray = [[NSMutableArray alloc] initWithCapacity:1];
     _focusImgurlArray = [[NSMutableArray alloc] initWithCapacity:1];
-    [_focusImgurlArray removeAllObjects];
-    NSString *photoURL0 = @"http://img1.imgtn.bdimg.com/it/u=1302463328,4122839787&fm=21&gp=0.jpg";
-    NSString *photoURL1 = @"http://img1.imgtn.bdimg.com/it/u=1755675502,2574324799&fm=21&gp=0.jpg";
-    NSString *photoURL2 = @"http://img0.imgtn.bdimg.com/it/u=3901532170,254545208&fm=21&gp=0.jpg";
-    NSString *photoURL3 = @"http://img1.imgtn.bdimg.com/it/u=1119164522,1002682415&fm=21&gp=0.jpg";
-    [_focusImgurlArray addObject:photoURL0];
-    [_focusImgurlArray addObject:photoURL1];
-    [_focusImgurlArray addObject:photoURL2];
-    [_focusImgurlArray addObject:photoURL3];
-    [self initData];
+    [self initBannerData];
+    [self initVideoData];
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 50, 0)];
+    //去掉分割线
+    self.tableView.separatorStyle = NO;
+    [self setupTableview];
 }
 
+//初始化轮播图数据
+-(void)initBannerData{
+    [_focusImgurlArray removeAllObjects];
+    [_focusImgurlArray addObject:PHOTO_URL_0];
+    [_focusImgurlArray addObject:PHOTO_URL_1];
+    [_focusImgurlArray addObject:PHOTO_URL_3];
+    [_focusImgurlArray addObject:PHOTO_URL_2];
+}
 
--(void)initData{
-    
+//初始化视频数据
+-(void)initVideoData{
     [_videoMutableArray removeAllObjects];
-
-    BmobQuery *bquery = [BmobQuery queryWithClassName:@"Video"];
-    [bquery orderByDescending:@"updatedAt"];
-    //[bquery whereKey:@"videoType" equalTo:[NSNumber numberWithInt:1]];
-    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array,NSError *error){
-        
-        if (error) {
-            
-        }else{
-            [hud hide:YES];
-            for (BmobObject *obj in array) {
-                GZVideoModel *videoModel = [[GZVideoModel alloc] init];
-                if ([obj objectForKey:@"videoName"]) {
-                    videoModel.videoName = [obj objectForKey:@"videoName"];
-                }
-                if ([obj objectForKey:@"imageUrl"]) {
-                    videoModel.imageUrl = [obj objectForKey:@"imageUrl"];
-                }
-                if ([obj objectForKey:@"author"]) {
-                    videoModel.author = [obj objectForKey:@"author"];
-                }
-                if ([obj objectForKey:@"star"]) {
-                    videoModel.star = [obj objectForKey:@"star"];
-                }
-                
-                [_videoMutableArray addObject:videoModel];
-            }
-            [self.tableView reloadData];
-        }
-    
-    }];
-
+    bmobRequest = [[BmobRequest alloc] init];
+    bmobRequest.delegate = self;
+    [bmobRequest requestVideoData:currentPage pageSize:pageSize];
 }
+
+
+-(void)setupTableview{
+
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer.automaticallyChangeAlpha = YES;
+}
+
+-(void)loadNewData{
+    currentPage = 0;
+    [_videoMutableArray removeAllObjects];
+    [bmobRequest requestVideoData:currentPage pageSize:pageSize];
+}
+
+-(void)loadMoreData{
+    [bmobRequest requestVideoData:currentPage pageSize:pageSize];
+}
+//请求之前 mark BannerViewCellDelegate
+-(void)beforeRequest{
+    [hud show:YES];
+}
+
+//请求成功回调 mark BannerViewCellDelegate
+-(void)requestSuccess:(NSMutableArray *) array{
+    __weak typeof(self) weakself = self;
+    [hud hide:YES];
+    if (currentPage == 0) {
+        [weakself.tableView.mj_header endRefreshing];
+    }else{
+        [weakself.tableView.mj_footer endRefreshing];
+    }
+    [_videoMutableArray addObjectsFromArray:array];
+    [weakself.tableView reloadData];
+    currentPage++;
+}
+
+//请求失败回调 mark BannerViewCellDelegate
+-(void)requestError:(NSError *)error{
+    if (currentPage == 0) {
+        [self.tableView.mj_header endRefreshing];
+    }else{
+        [self.tableView.mj_footer endRefreshing];
+    }
+}
+
 /*
  table view total number
  */

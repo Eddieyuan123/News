@@ -6,4 +6,7 @@ target 'News' do
   pod 'SDWebImage', '~> 3.8.1'
   pod 'MBProgressHUD', '~> 0.8'
   pod 'BmobSDK'
+  pod 'MJRefresh'
+  pod 'MJExtension'
+  pod 'SVProgressHUD'
 end

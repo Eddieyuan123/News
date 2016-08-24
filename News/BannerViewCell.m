@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "public.h"
 
+
 @implementation BannerViewCell
 
 - (void)awakeFromNib {
@@ -37,6 +38,7 @@
         }
     }
 }
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
