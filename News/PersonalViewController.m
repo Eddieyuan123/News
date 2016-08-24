@@ -1,18 +1,18 @@
 //
-//  VideoViewController.m
+//  PersonalViewController.m
 //  News
 //
-//  Created by Eddie on 16/8/18.
+//  Created by chelizi on 16/8/24.
 //  Copyright © 2016年 xiebangyuan. All rights reserved.
 //
 
-#import "VideoViewController.h"
+#import "PersonalViewController.h"
 
-@interface VideoViewController ()
+@interface PersonalViewController ()
 
 @end
 
-@implementation VideoViewController
+@implementation PersonalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
