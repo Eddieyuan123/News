@@ -7,8 +7,10 @@
 //
 
 #import "PersonalViewController.h"
+#import "LoginViewCell.h"
+#import "UserInfoViewCell.h"
 
-@interface PersonalViewController ()
+@interface PersonalViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -18,15 +20,48 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
     self.view.backgroundColor = [UIColor darkGrayColor];
-    //[self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 50, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 50, 0)];
     //去掉分割线
-    //self.tableView.separatorStyle = NO;
+    self.tableView.separatorStyle = NO;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return indexPath.row == 0 ? 250 : 400;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        static NSString *indentifier = @"login";
+        LoginViewCell *loginViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+        if(loginViewCell == nil) {
+            [tableView registerNib:[UINib nibWithNibName:@"LoginViewCell" bundle:nil]  forCellReuseIdentifier:indentifier];
+            loginViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+        }
+        return loginViewCell;
+    }else{
+        static NSString *indentifier = @"userInfo";
+        UserInfoViewCell *userInfoViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+        if(userInfoViewCell == nil) {
+            [tableView registerNib:[UINib nibWithNibName:@"UserInfoViewCell" bundle:nil]  forCellReuseIdentifier:indentifier];
+            userInfoViewCell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+        }
+        return userInfoViewCell;
+    }
+}
+
+
 
 /*
 #pragma mark - Navigation
